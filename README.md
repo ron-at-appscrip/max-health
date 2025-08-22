@@ -1,46 +1,280 @@
-# Getting Started with Create React App
+# MaxHealth Broker Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React application built with TypeScript, Tailwind CSS, Lucide React icons, and shadcn/ui components for the MaxHealth Broker Portal authentication system.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+### Authentication System
+- **Login Page** (`/login`) - Secure broker authentication
+- **Registration Page** (`/register`) - Broker onboarding with admin approval workflow
+- **Dashboard** (`/dashboard`) - Post-login broker portal
+- **Form Validation** - Real-time validation using Zod schemas
+- **Responsive Design** - Works perfectly on desktop, tablet, and mobile
+- **Modern UI/UX** - Beautiful design with smooth animations
 
-### `npm start`
+### Technical Features
+- **React 18** with TypeScript for type safety
+- **Tailwind CSS v3** for utility-first styling
+- **Lucide React** for beautiful, customizable icons
+- **shadcn/ui** components for consistent, accessible UI
+- **React Hook Form** with Zod validation
+- **React Router** for client-side routing
+- **Radix UI** for accessibility and advanced components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🛠️ Tech Stack
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- React 18
+- TypeScript
+- Tailwind CSS v3
+- Lucide React Icons
+- shadcn/ui Components
+- React Hook Form
+- Zod Validation
+- React Router DOM
+- Radix UI Primitives
 
-### `npm test`
+## 📦 Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd max-life-broker-portal
+```
 
-### `npm run build`
+2. Install dependencies:
+```bash
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Start the development server:
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎯 Project Structure
 
-### `npm run eject`
+```
+src/
+├── components/
+│   └── ui/           # shadcn/ui components
+│       ├── button.tsx
+│       ├── card.tsx
+│       ├── input.tsx
+│       ├── label.tsx
+│       ├── checkbox.tsx
+│       └── select.tsx
+├── pages/            # Application pages
+│   ├── LoginPage.tsx
+│   ├── RegisterPage.tsx
+│   └── DashboardPage.tsx
+├── lib/
+│   └── utils.ts      # Utility functions
+├── App.tsx           # Main application with routing
+├── index.tsx         # Application entry point
+└── index.css         # Global styles with Tailwind
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🔐 Authentication Flow
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Login Page (`/login`)
+- **URL**: `https://portal.maxhealth.ae/auth/login`
+- **Features**:
+  - Email and password validation
+  - Show/hide password toggle
+  - Remember me checkbox
+  - Forgot password link
+  - Get Started CTA (navigates to registration)
+  - Real-time form validation
+  - Loading states and error handling
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**Demo Credentials**:
+- Email: `demo@maxhealth.ae`
+- Password: `password123`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Registration Page (`/register`)
+- **URL**: `https://portal.maxhealth.ae/auth/register`
+- **Form Fields**:
+  - Title dropdown (Mr./Mrs./Ms.)
+  - First Name, Middle Name, Last Name
+  - Email Address (validated format)
+  - Mobile Number with country code (defaults to UAE +971)
+  - Company Name, Department, Position
+  - Insurance Authorization Registration Number
+- **Workflow**:
+  - Form validation on input
+  - Submission to admin team for review
+  - Confirmation message with next steps
+  - 48-hour review timeline
+  - Email notification upon approval
 
-## Learn More
+### Dashboard (`/dashboard`)
+- **Post-login broker portal**
+- **Features**:
+  - Welcome header with logout
+  - Statistics cards (clients, revenue, growth)
+  - Feature overview
+  - Responsive layout
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🎨 UI Components
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Form Components
+- **Input** - Text fields with validation states
+- **Select** - Dropdown menus for title and country code
+- **Checkbox** - Remember me functionality
+- **Button** - Multiple variants (default, outline, loading states)
+- **Label** - Form field labels
+- **Card** - Content containers
+
+### Layout Components
+- **Responsive Design** - Mobile-first approach
+- **Split Layout** - Left branding panel, right form panel
+- **Navigation** - Header with logout functionality
+- **Footer** - Company information and legal links
+
+## 🔧 Configuration
+
+### Tailwind CSS
+- Custom color scheme with CSS variables
+- Dark mode support (ready for implementation)
+- Responsive breakpoints
+- Custom animations and transitions
+
+### Form Validation
+- **Zod Schemas** for type-safe validation
+- **Real-time validation** with React Hook Form
+- **Error messages** for all required fields
+- **Loading states** during form submission
+
+### Routing
+- **React Router DOM** for client-side navigation
+- **Protected routes** (ready for implementation)
+- **Redirect logic** for authentication flow
+
+## 🚀 Available Scripts
+
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App (one-way operation)
+
+## 🎨 Customization
+
+### Adding New shadcn/ui Components
+
+1. Install the component:
+```bash
+npx shadcn@latest add [component-name]
+```
+
+2. Import and use in your components:
+```tsx
+import { ComponentName } from "@/components/ui/component-name"
+```
+
+### Adding New Lucide Icons
+
+1. Import the icon from lucide-react:
+```tsx
+import { IconName } from 'lucide-react'
+```
+
+2. Use in your JSX:
+```tsx
+<IconName className="h-6 w-6" />
+```
+
+### Styling with Tailwind CSS
+
+The project uses Tailwind CSS v3 with custom CSS variables for theming. You can customize colors, spacing, and other design tokens in the `tailwind.config.js` file.
+
+## 🔒 Security Features
+
+- **Form Validation** - Client-side validation with Zod
+- **Password Masking** - Show/hide password functionality
+- **CSRF Protection** - Ready for implementation
+- **HTTPS Ready** - Secure communication protocols
+- **Session Management** - Ready for implementation
+
+## 📱 Responsive Design
+
+The application is fully responsive and includes:
+- Mobile-first design approach
+- Responsive navigation
+- Flexible grid layouts
+- Adaptive typography
+- Touch-friendly interactions
+
+## 🌐 Browser Compatibility
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## 🔧 Configuration Files
+
+- `tailwind.config.js` - Tailwind CSS configuration with shadcn/ui theme
+- `tsconfig.json` - TypeScript configuration with path aliases
+- `postcss.config.js` - PostCSS configuration for Tailwind
+- `package.json` - Project dependencies and scripts
+
+## 🚀 Deployment
+
+To build the application for production:
+
+```bash
+npm run build
+```
+
+The build artifacts will be stored in the `build/` directory.
+
+### Production Considerations
+- Set up environment variables for API endpoints
+- Configure HTTPS certificates
+- Set up proper CORS policies
+- Implement proper session management
+- Add error monitoring and logging
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📞 Support
+
+For support and questions, please open an issue in the repository.
+
+## 🔄 Backend Integration
+
+The application is ready for backend integration. Key areas to implement:
+
+1. **API Endpoints**:
+   - `/api/auth/login` - User authentication
+   - `/api/auth/register` - User registration
+   - `/api/auth/logout` - User logout
+
+2. **Session Management**:
+   - JWT tokens or session cookies
+   - Token refresh mechanisms
+   - Secure storage implementation
+
+3. **Admin Workflow**:
+   - Registration approval system
+   - Email notifications
+   - Admin dashboard for managing brokers
+
+4. **Security**:
+   - Password hashing
+   - Rate limiting
+   - Input sanitization
+   - CSRF protection
+# max-health
