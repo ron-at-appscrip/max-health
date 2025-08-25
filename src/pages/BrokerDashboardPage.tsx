@@ -242,7 +242,7 @@ const BrokerDashboardPage: React.FC = () => {
           <Button 
             size="lg" 
             variant="outline"
-            onClick={() => navigate('/cases/new')}
+            onClick={() => navigate('/new-case')}
             className="border-gray-300 hover:bg-gray-50"
           >
             <Plus className="h-5 w-5 mr-2" />

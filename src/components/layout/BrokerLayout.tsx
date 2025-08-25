@@ -59,7 +59,7 @@ const BrokerLayout: React.FC<BrokerLayoutProps> = ({ children, title, descriptio
         navigate('/cases/archive');
         break;
       case 'new-case':
-        navigate('/cases/new');
+        navigate('/new-case');
         break;
       case 'payments':
         navigate('/payments');

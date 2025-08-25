@@ -6,6 +6,7 @@ import BrokerDashboardPage from './pages/BrokerDashboardPage';
 import AdminDashboardPage from './pages/AdminDashboardPage';
 import UserManagementPage from './pages/UserManagementPage';
 import RoleManagementPage from './pages/RoleManagementPage';
+import CreateNewCasePage from './pages/CreateNewCasePage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/admin" element={<AdminDashboardPage />} />
           <Route path="/admin/users" element={<UserManagementPage />} />
           <Route path="/admin/roles" element={<RoleManagementPage />} />
+          <Route path="/new-case" element={<CreateNewCasePage />} />
         </Routes>
       </div>
     </Router>
