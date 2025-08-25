@@ -232,9 +232,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children, title, description 
                     alt="MaxHealth Logo" 
                     className="h-8 w-auto"
                   />
-                  <span className="font-bold text-lg">
-                    {isRTL ? 'ماكس هيلث' : 'MaxHealth'}
-                  </span>
+                
                 </div>
               )}
               <Button
@@ -243,7 +241,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children, title, description 
                 onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
                 className="p-1"
               >
-                <ChevronRight className={`h-4 w-4 transition-transform ${sidebarCollapsed ? 'rotate-180' : ''}`} />
+                <ChevronRight className={`h-4 w-4 transition-transform ${!sidebarCollapsed ? 'rotate-180' : ''}`} />
               </Button>
             </div>
           </div>
